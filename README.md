@@ -1,24 +1,38 @@
-# Exercise app
+# REPO67
 
+Minimalna aplikacja Python z prostym CLI i logiką „tiny fizzbuzz”.
 
-Small example for the exercise. Contains a tiny single-file app `single_app.py` with logic and a CLI entrypoint.
+## Quick Start
 
-Quick start (recommended):
+### 1. Klonowanie repozytorium
 
-- create a virtualenv and install pytest (example using Python 3.10+):
+```bash
+git clone <https://github.com/Felipe2137/REPO67>
+cd REPO67
 
-```powershell
-python -m venv .venv; .\.venv\Scripts\Activate.ps1; pip install -U pip; pip install pytest
-```
+### 2. Stworzenie venv i instalacja zależności
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 
-- run tests:
+### 3. Uruchamianie aplikacji
+python single_app.py 
 
-```powershell
-pytest -q
-```
+### 4. Linting i formatowanie 
+bash scripts/format_code.sh #Formatowanie
+bash scripts/format_check.sh #Sprawdzenie formatowania
+bash scripts/lint.sh #Lintowanie
+bash scripts/run_tests.sh #Testy
 
-- run CLI:
+### 5. Continuous Integration (CI)
 
-```powershell
-python single_app.py
-```
+#Projekt używa GitHub Actions:
+
+#Workflow znajduje się w .github/workflows/ci.yml.
+#Pipeline uruchamia się automatycznie przy pushach i pull requestach na branże: main, develop.
+#Pipeline wykonuje kolejno:
+#Tworzy i aktywuje środowisko .venv.
+#Instaluje zależności z requirements.txt.
+#Sprawdza formatowanie kodu (black).
+#Analizuje kod pod kątem błędów i stylu (pylint).
+#Uruchamia testy jednostkowe (pytest).

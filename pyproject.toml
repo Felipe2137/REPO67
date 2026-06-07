@@ -1,0 +1,17 @@
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.mypy_cache
+  | \.pytest_cache
+  | build
+  | dist
+)/
+'''
+
+[tool.pylint.main]
+disable = ["C0114", "C0115", "C0116"]
+max-line-length = 88

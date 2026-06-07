@@ -27,10 +27,13 @@ jobs:
           python-version: "3.12"
 
       - name: Create virtualenv and install dependencies
-        run: bash scripts/init_venv.sh
+        run: bash scripts/init_env.sh
 
       - name: Format
         run: bash scripts/format_code.sh
+
+      - name: Format Check
+        run: bash scripts/format_check.sh
 
       - name: Lint
         run: bash scripts/lint.sh

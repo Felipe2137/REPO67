@@ -3,4 +3,4 @@ set -e
 
 source .venv/bin/activate
 
-pytest tests/ -v
+pytest -v

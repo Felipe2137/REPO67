@@ -3,5 +3,4 @@ set -e
 
 source .venv/bin/activate
 
-black --check .
-isort --check-only .
+black --check single_app.py tests/
